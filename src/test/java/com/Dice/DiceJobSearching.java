@@ -1,5 +1,6 @@
 package com.Dice;
 
+import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -9,7 +10,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DiceJobSearching {
+	
 public static void main(String[] args) throws InterruptedException {
+	System.out.println("Exercise on git");
 	WebDriverManager.chromedriver().setup();
 	WebDriver driver=new ChromeDriver();
 	driver.get("http://www.dice.com");
@@ -20,5 +23,10 @@ public static void main(String[] args) throws InterruptedException {
 	Thread.sleep(2000);
 	String count=driver.findElement(By.id("posiCountId")).getText();
 	System.out.println(count);
+	
+	driver.close();
+	System.out.println(LocalDateTime.now());
+	
 }
+
 }
